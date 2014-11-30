@@ -1,0 +1,202 @@
+
+/* HEADER */
+
+.logo_container{
+
+	float:left;
+	width:18%;
+	height:10px;
+	position: relative;
+	max-width:170px;
+
+	.site_logo{
+		position:absolute;
+		z-index: 150;
+		width:100%;
+	}
+
+}
+
+.nav_spacer{
+	width:100%;
+	height:125px;
+}
+
+/* NAV */
+
+.nav_container{
+
+	width:82%;
+	float:left;
+
+	.top-nav{
+
+		margin:0px;
+
+		li{
+
+			display:inline-block;
+			text-decoration: none;
+			padding:5px;
+
+		}
+
+		a{
+			text-transform: uppercase;
+			border-right:1px #fff solid;
+			padding-right:12px;
+		}
+
+		li:last-child a{
+			border-right:none;
+		}
+
+		li:first-child a{
+			border-left:none;
+		}
+	}
+
+}
+
+/* GALLERY */
+
+.gallery_wrapper{
+
+	width:100%;
+	background-color: #eee;
+	height:400px;
+
+	.gallery_frame{
+		margin:0px;
+	}
+
+}
+
+.slides-navigation a.prev {
+    left: 10px;
+}
+
+.slides-navigation a.next {
+    right: 10px;
+}
+
+.fi-arrow-right, .fi-arrow-left{
+	font-size: 30px;
+}
+
+/* VIDEO GALLERY */
+
+.video_wrapper{
+	margin-bottom:10px;
+}
+
+.video_item{
+	cursor: pointer;
+
+	.vid_thumb{
+
+		position: relative;
+		display: block;
+
+		img{
+			display: block;
+		}
+
+		.playtag{
+			color: #fff;
+			position: absolute;
+			bottom:0px;
+			left:0px;
+			font-size: 1.6rem;
+			display: block;
+			padding:10px;
+			width:100%;
+			background-color: rgba(0,0,0,0.75);
+			text-align: center;
+		}
+
+	}
+
+}
+
+/* BOOKING FORM */
+
+form{
+
+	.multiline{
+		height:18.9rem;
+	}
+
+	small.error{
+		display: none;
+	}
+
+}
+
+.error input, .error textarea, .error select {
+    margin-bottom: 0px;
+}
+
+/* MISSION STATEMENT */
+
+.mission_container{
+
+	background-color: #b2a68d;
+	
+	p{
+		color:#fff;
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+		padding-top:10px;
+	}
+
+}
+
+/* FOOTER GALLERY */
+
+.footer_gallery_wrapper{
+
+	width:100%;
+	background-color: #eee;
+
+	.footer_gallery_container{
+
+		text-align: center;
+
+	}
+
+}
+
+/* FOOTER LINKS */
+
+.asoc_links_container{
+
+	text-align: center;
+
+	li{
+		display:inline-block;
+		list-style: none;
+		margin-top: 10px;
+
+		a{
+			display:block;
+		}
+	}
+
+}
+
+.footer_links_wrapper{
+
+
+	h4{
+		text-align: center;
+	}
+
+}
+
+
+
+
+
+
+/**/
