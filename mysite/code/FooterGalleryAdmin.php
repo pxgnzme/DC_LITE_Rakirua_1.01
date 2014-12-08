@@ -6,9 +6,9 @@ class FooterGalleryAdmin extends ModelAdmin {
         "FooterImage"
     );
 
-    private static $menu_title = "Footer Gallery";
+    private static $menu_title = "Media Gallery";
 
-    private static $url_segment = "Footer-Gallery";
+    private static $url_segment = "Media-Gallery";
 
 
 }
