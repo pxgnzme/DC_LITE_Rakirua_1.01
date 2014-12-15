@@ -1,4 +1,5 @@
 
+/*  */
 /* HEADER */
 
 .logo_container{
@@ -194,9 +195,24 @@ form{
 
 }
 
+.content_table{
+	width:100%;
+}
 
 
+/* ABOUT */
 
+.bio_wrapper{
+	width:100%;
+
+	.member_pic{
+		-webkit-border-radius: 75px;
+-moz-border-radius: 75px;
+border-radius: 75px;
+overflow:hidden;
+width:150px;
+	}
+}
 
 
 /**/

@@ -6,7 +6,7 @@ $project = 'mysite';
 global $databaseConfig;
 $databaseConfig = array(
 	"type" => 'MySQLDatabase',
-	"server" => 'odin.hosts.net.nz',
+	"server" => 'ghost.hosts.net.nz',
 	"username" => 'rmlt_admin',
 	"password" => '&?%Z$qi($OgC',
 	"database" => 'rmlt_ss',
@@ -28,5 +28,21 @@ ShortcodeParser::get('default')->register(
 
 // register shortcodes
 ShortcodeParser::get('default')->register(
-    'openbooking', array('Page_Controller', 'openbookingHandler')
+    'agendaTable', array('Page_Controller', 'agendaTableHandler')
+);
+
+// register shortcodes
+ShortcodeParser::get('default')->register(
+'openbooking', array('Page_Controller', 'openbookingHandler')
+);
+
+// register shortcodes
+ShortcodeParser::get('default')->register(
+'hutsTable', array('Page_Controller', 'hutsHandler')
+);
+
+
+// register shortcodes
+ShortcodeParser::get('default')->register(
+'contentGallery', array('rakHunting_Controller', 'contentGalleryHandler')
 );

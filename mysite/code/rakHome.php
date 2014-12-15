@@ -28,7 +28,13 @@ class rakHome extends Page {
       
       $fields->addFieldToTab('Root.Content.Main',$missionToggle,'MissonStatement');
 
-      return $fields;    
+      $gridFieldConfig = GridFieldConfig_RecordEditor::create(1000); 
+      /*$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));*/
+      $gridfield = new GridField("Video galllery", "Gallery videos", Video::get(), $gridFieldConfig);
+
+      $fields->addFieldToTab('Root.Content.VideoGallery', $gridfield);
+
+      return $fields;   
     }
 }
  

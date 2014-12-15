@@ -41,7 +41,7 @@ class Page extends SiteTree {
 	    //->addExtraClass('switchable');
 
 	    $fields->removeByName("Content");
-	    $fields->addFieldToTab('Root.Content.Gallery', $gridfield);
+	    $fields->addFieldToTab('Root.Content.TopGallery', $gridfield);
 
 	    $fields->addFieldToTab('Root.Content.Main',$galleryToggle,'Metadata');
 	    $fields->addFieldToTab('Root.Content.Main',$footerGalleryToggle,'Metadata');
@@ -84,7 +84,7 @@ class Page_Controller extends ContentController {
 
 	public function footerImgWidth() {
         //$items = FooterImage::get()->sort('BlogTitle ASC');
-        $items = FooterImage::get();
+        $items = GalleryItem::get();
 
         $imgPercent = 100/count($items);
 
@@ -94,8 +94,15 @@ class Page_Controller extends ContentController {
 
 	public function items() {
         //$items = FooterImage::get()->sort('BlogTitle ASC');
-        $items = FooterImage::get()->sort('SortOrder ASC');
+        $items = GalleryItem::get()->sort('SortOrder ASC');
         if($items) return $items;
+        else return false;
+    }
+
+    public function members() {
+        //$items = FooterImage::get()->sort('BlogTitle ASC');
+        $members = AgmMembers::get();
+        if($members) return $members;
         else return false;
     }
 
@@ -178,6 +185,60 @@ class Page_Controller extends ContentController {
 
 	}
 
+	static function agendaTableHandler($arguments, $content) {
+
+		$agendaItems = AgmAgenda::get();
+
+		$agendaHTML = "<table class = 'content_table'><thead><tr><td></td><td>Details</td><td>Requested by</td><td>Postal Voting</td><td>Status</td></tr></thead><tbody>";
+
+		foreach ($agendaItems as $key => $value) {
+			
+			$agendaHTML = $agendaHTML."<tr>";
+
+			$agendaHTML = $agendaHTML."<td>".$value->OrderNumber."</td>"."<td>".$value->Details."</td>"."<td>".$value->RequestedBy."</td>"."<td>".$value->Postal."</td>"."<td>".$value->Status."</td>";
+
+        	$agendaHTML = $agendaHTML."</tr>";
+
+		}
+
+		$agendaHTML = $agendaHTML."</tbody></table>";
+
+		
+
+		return $agendaHTML;
+
+	}
+
+	static function hutsHandler($arguments, $content) {
+
+		$hutItems = Hut::get();
+
+		$hutHTML = "<table class = 'content_table'><thead><tr><td>Facility</td><td>Block name</td><td>Other known names</td><td>Cycle</td><td>Status</td><td>Comments</td></tr></thead><tbody>";
+
+		foreach ($hutItems as $key => $value) {
+			
+			$hutHTML = $hutHTML."<tr>";
+
+			$hutHTML = $hutHTML."<td>".$value->Facility."</td>"."<td>".$value->Name."</td>"."<td>".$value->AltName."</td>"."<td>".$value->Cycle."</td>"."<td>".$value->Status."</td>"."<td>".$value->Comments."</td>";
+
+        	$hutHTML = $hutHTML."</tr>";
+
+		}
+
+		$hutHTML = $hutHTML."</tbody></table>";
+
+
+
+		
+
+		return $hutHTML;
+
+	}
+
+	
+
+	
+
 	static function openbookingHandler($arguments, $content) {
 
 		$targetClass = $arguments['class'];
@@ -187,6 +248,7 @@ class Page_Controller extends ContentController {
 		return "<button class= '$targetClass' data-sendto='$targetSend'>$targetTitle</button>";
 
 	}
+
 	
 
 	

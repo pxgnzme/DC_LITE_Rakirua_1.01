@@ -33,11 +33,11 @@
 
         	if($(this).is(":checked")){
 
-        		$('#tab-Root_Gallery').show();
+        		$('#tab-Root_TopGallery').show();
 
         	}else{
 
-        		$('#tab-Root_Gallery').hide();
+        		$('#tab-Root_TopGallery').hide();
 
         	}
 
