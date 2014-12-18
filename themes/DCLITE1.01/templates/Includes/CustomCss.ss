@@ -37,7 +37,7 @@ h4{
 	font-size:$SiteConfig.h4Size;
 }
 
-p, .video_des{
+p, .video_des, li{
 	color:#$SiteConfig.pColor;
 	font-size:$SiteConfig.pSize;
 }

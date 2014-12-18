@@ -1,7 +1,14 @@
 // version 1.01
 
+$(document)
+.on('open.fndtn.offcanvas', '[data-offcanvas]', function() {
+  $('html').css('overflow', 'hidden');
+  $.logThis("OPEN");
+})
+
 $(document).ready(function() {
 	
+
 	placeholderFix();
 
 	gallerySlider();
@@ -9,8 +16,50 @@ $(document).ready(function() {
 	videoGallery();
 
 	bookingListerners();
+
+	loginListeners();
 	
 });
+
+function loginListeners(){
+
+	//login_btn
+
+	$("header .login_btn").on('click',function(e){
+
+		e.preventDefault();
+
+		$('header .login_btn').hide();
+
+		$('.close_login').show();
+
+		$('.login_form_container').show();
+
+	});
+
+	$(".right-off-canvas-menu .login_btn").on('click',function(e){
+
+		e.preventDefault();
+
+		$('.right-off-canvas-menu .login_form_container').show();
+
+	});
+
+	$('.close_login').on('click',function(){
+
+		$('.close_login').hide();
+
+		$('header .login_btn').show();
+
+		$('.login_form_container').hide();
+
+	});
+
+	$('#MemberLoginForm_LoginForm_action_dologin').addClass("button");
+
+	$('#Email label').html("Username");
+
+};
 
 function bookingListerners(){
 

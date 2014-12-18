@@ -1,16 +1,6 @@
-<nav class="row">
 
-    <div class = "large-12 columns">
 
-		<div class = "logo_container">
-		
-			<!-- <a class="left-off-canvas-toggle" href="#" >Menu</a>--><a class = "site_logo" href="{$baseUrl}">$SiteConfig.siteLogo</a>
-		
-		</div>
-
-		<div class = "nav_container">
-
-			<ul class = "top-nav">
+			
 
 				<% loop Menu(1) %>
 
@@ -38,9 +28,19 @@
 
 				<% end_loop %>
 
-			</ul>
-		</div>
+				<li class= "login_nav">
 
-	</div>
+				<% if $isLoggedIn() %>
 
-</nav>
+				<a href="Security/logout" class = "logout_btn">LOGOUT <% control isLoggedIn %> $FirstName <% end_control %> <i class="fi-torso"></i></a>
+
+				<% else %>
+
+				<a href="" class = "login_btn">LOGIN <i class="fi-torso"></i></a><a href="" class = "close_login"><i class="fi-x"></i> CLOSE</a>
+
+				<% end_if %>
+
+				</li>
+
+			
+			

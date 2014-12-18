@@ -16,6 +16,8 @@ $databaseConfig = array(
 // Set the site locale
 i18n::set_locale('en_US');
 
+Member::add_extension('MyMemberExtension');
+
 // register shortcodes
 ShortcodeParser::get('default')->register(
     'videoGallery', array('Page_Controller', 'videoGalleryHandler')
@@ -41,8 +43,9 @@ ShortcodeParser::get('default')->register(
 'hutsTable', array('Page_Controller', 'hutsHandler')
 );
 
-
 // register shortcodes
 ShortcodeParser::get('default')->register(
 'contentGallery', array('rakHunting_Controller', 'contentGalleryHandler')
 );
+
+

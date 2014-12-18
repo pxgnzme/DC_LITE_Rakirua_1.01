@@ -1,3 +1,5 @@
+
+
 <% if $hasGallery = "1"%>
 
 <div class = "gallery_wrapper">
@@ -34,6 +36,8 @@
 </div>
 <% end_if %>
 
+<% if $isLoggedIn() %>
+
 <div class ="row">
 
     <div class="small-$Column1Width columns">
@@ -46,24 +50,23 @@
 
 </div>
 
-<% if $hasFooterGallery = "1"%>
+<% else %>
 
-<div class = "footer_gallery_wrapper">
+<div class ="row">
 
-    <div class="row footer_gallery_container collapse">
-
-        <% if $items %>
-            <% loop $items.Limit(6) %>
-            <div class = "medium-2 small-12 columns">
-                $Image.SetWidth(600).CroppedImage(400,400)
-            </div>
-            <% end_loop %>
-        <% end_if %>
-
+    <div class="small-12 columns">
+        <p>Sorry you don't have access to this page</p>
     </div>
 
 </div>
 
 <% end_if %>
+
+<% if $hasFooterGallery = "1"%>
+
+<% include Footer %>
+
+<% end_if %>
+
 	
    

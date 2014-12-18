@@ -33,15 +33,18 @@
 
 		<div class="inner-wrap">
 
+			<a class="right-off-canvas-toggle" href="#" ><i class="fi-list"></i> Menu</a>
+
 			<!-- Off Canvas Menu -->
-		    <aside class="left-off-canvas-menu">
-		        <!-- whatever you want goes here -->
-		        <ul>
-		          <li><a href="#">Item 1</a></li>
-		          <li><a href="#">Item 2</a></li>
-		          <li><a href="#">Item 3</a></li>
-		          <li><a href="#">Item 4</a></li>
-		        </ul>
+		    <aside class="right-off-canvas-menu">
+
+		      <ul>
+		      <% include MobNav %>
+
+		      </ul>
+
+		      
+
 		    </aside>
 
 			<header>
@@ -105,6 +108,14 @@ While every effort has been made to ensure the accuracy of this website, it has 
 	<div id="page_modal" class="reveal-modal" data-reveal>
 
 		<div id= "modal_container"></div>
+
+		<a class="close-reveal-modal">&#215;</a>    
+
+	</div>
+
+	<div id="login_modal" class="reveal-modal" data-reveal>
+
+		<div id= "form_modal_container">$LoginForm</div>
 
 		<a class="close-reveal-modal">&#215;</a>    
 

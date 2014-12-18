@@ -6,9 +6,9 @@ class Hut extends DataObject {
 
         'Facility' => 'Text',
         'Name' => 'Text',
-        'AltName' => 'Text',
-        'Cycle'=>'Text',
-        'Status'=>'Text',
+        'RotationDay' => 'Text',
+        'OneWeekPrice'=>'Text',
+        'TwoWeekPrice'=>'Text',
         'Comments'=>'Text'
     
     );
@@ -20,9 +20,9 @@ class Hut extends DataObject {
     public static $summary_fields = array(
         'Facility' => 'Facility',
         'Name' => 'Name',
-        'AltName' => 'AltName',
-        'Cycle'=>'Cycle',
-        'Status'=>'Status',
+        'RotationDay' => 'RotationDay',
+        'OneWeekPrice'=>'OneWeekPrice',
+        'TwoWeekPrice'=>'TwoWeekPrice',
         'Comments'=>'Comments'   
     );
 

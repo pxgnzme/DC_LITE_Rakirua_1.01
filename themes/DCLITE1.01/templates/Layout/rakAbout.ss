@@ -34,6 +34,7 @@
 </div>
 <% end_if %>
 
+<% if $isLoggedIn() %>
 <div class ="row">
 
     <div class="small-$Column1Width columns">
@@ -45,6 +46,7 @@
     </div>
 
 </div>
+<% end_if %>
 
 <div class = "bio_wrapper row">
 <!-- <div class = "bio_wrapper">-->
@@ -85,21 +87,7 @@
 
 <% if $hasFooterGallery = "1"%>
 
-<div class = "footer_gallery_wrapper">
-
-    <div class="row footer_gallery_container collapse">
-
-        <% if $items %>
-            <% loop $items.Limit(6) %>
-            <div class = "medium-2 small-12 columns">
-                $Image.SetWidth(600).CroppedImage(400,400)
-            </div>
-            <% end_loop %>
-        <% end_if %>
-
-    </div>
-
-</div>
+<% include Footer %>
 
 <% end_if %>
 	

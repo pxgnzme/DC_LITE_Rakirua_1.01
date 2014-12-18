@@ -70,6 +70,7 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
+		'logout' 
 	);
 
 	public function Photos() {
@@ -213,13 +214,13 @@ class Page_Controller extends ContentController {
 
 		$hutItems = Hut::get();
 
-		$hutHTML = "<table class = 'content_table'><thead><tr><td>Facility</td><td>Block name</td><td>Other known names</td><td>Cycle</td><td>Status</td><td>Comments</td></tr></thead><tbody>";
+		$hutHTML = "<table class = 'content_table'><thead><tr><td>Facility</td><td>Block name</td><td>Rotation Day</td><td>1 Week Price</td><td>2 Week Price</td><td>Comments</td></tr></thead><tbody>";
 
 		foreach ($hutItems as $key => $value) {
 			
 			$hutHTML = $hutHTML."<tr>";
 
-			$hutHTML = $hutHTML."<td>".$value->Facility."</td>"."<td>".$value->Name."</td>"."<td>".$value->AltName."</td>"."<td>".$value->Cycle."</td>"."<td>".$value->Status."</td>"."<td>".$value->Comments."</td>";
+			$hutHTML = $hutHTML."<td>".$value->Facility."</td>"."<td>".$value->Name."</td>"."<td>".$value->RotationDay."</td>"."<td>".$value->OneWeekPrice."</td>"."<td>".$value->TwoWeekPrice."</td>"."<td>".$value->Comments."</td>";
 
         	$hutHTML = $hutHTML."</tr>";
 
@@ -249,9 +250,29 @@ class Page_Controller extends ContentController {
 
 	}
 
-	
 
-	
+	public function isLoggedIn() {
+
+        if( $member = Member::currentUser() ) {
+		    // Work with $member
+		    return $member;
+
+		} else {
+		    
+			return false;
+		    // Do non-member stuff
+		}
+    }
+
+    function logout() {
+
+	   Security::logout(false);
+
+	   Director::redirect("/");
+
+	}
+
+
 
 }
 

@@ -9569,7 +9569,7 @@ th.hide-for-touch {
   float: left;
   width: 18%;
   height: 10px;
-  position: relative;
+  position: absolute;
   max-width: 170px;
 }
 /* line 13, ../compass/parts/project.scss */
@@ -9588,81 +9588,96 @@ th.hide-for-touch {
 /* NAV */
 /* line 28, ../compass/parts/project.scss */
 .nav_container {
-  width: 82%;
+  width: 100%;
   float: left;
+  height: 36px;
 }
-/* line 33, ../compass/parts/project.scss */
+/* line 35, ../compass/parts/project.scss */
 .nav_container .top-nav {
+  padding-left: 200px;
   margin: 0px;
 }
-/* line 37, ../compass/parts/project.scss */
+/* line 39, ../compass/parts/project.scss */
 .nav_container .top-nav li {
   display: inline-block;
   text-decoration: none;
   padding: 5px;
 }
-/* line 45, ../compass/parts/project.scss */
+/* line 47, ../compass/parts/project.scss */
 .nav_container .top-nav a {
   text-transform: uppercase;
   border-right: 1px #fff solid;
   padding-right: 12px;
 }
-/* line 51, ../compass/parts/project.scss */
+/* line 53, ../compass/parts/project.scss */
+.nav_container .top-nav .active a {
+  color: #fff;
+}
+/* line 57, ../compass/parts/project.scss */
 .nav_container .top-nav li:last-child a {
   border-right: none;
 }
-/* line 55, ../compass/parts/project.scss */
+/* line 61, ../compass/parts/project.scss */
 .nav_container .top-nav li:first-child a {
   border-left: none;
 }
+/* line 65, ../compass/parts/project.scss */
+.nav_container .top-nav .login_nav {
+  float: right;
+  color: #333;
+}
+/* line 69, ../compass/parts/project.scss */
+.nav_container .top-nav .login_nav .close_login {
+  display: none;
+}
 
 /* GALLERY */
-/* line 64, ../compass/parts/project.scss */
+/* line 85, ../compass/parts/project.scss */
 .gallery_wrapper {
   width: 100%;
   background-color: #eee;
   height: 400px;
 }
-/* line 70, ../compass/parts/project.scss */
+/* line 91, ../compass/parts/project.scss */
 .gallery_wrapper .gallery_frame {
   margin: 0px;
 }
 
-/* line 76, ../compass/parts/project.scss */
+/* line 97, ../compass/parts/project.scss */
 .slides-navigation a.prev {
   left: 10px;
 }
 
-/* line 80, ../compass/parts/project.scss */
+/* line 101, ../compass/parts/project.scss */
 .slides-navigation a.next {
   right: 10px;
 }
 
-/* line 84, ../compass/parts/project.scss */
+/* line 105, ../compass/parts/project.scss */
 .fi-arrow-right, .fi-arrow-left {
   font-size: 30px;
 }
 
 /* VIDEO GALLERY */
-/* line 90, ../compass/parts/project.scss */
+/* line 111, ../compass/parts/project.scss */
 .video_wrapper {
   margin-bottom: 10px;
 }
 
-/* line 94, ../compass/parts/project.scss */
+/* line 115, ../compass/parts/project.scss */
 .video_item {
   cursor: pointer;
 }
-/* line 97, ../compass/parts/project.scss */
+/* line 118, ../compass/parts/project.scss */
 .video_item .vid_thumb {
   position: relative;
   display: block;
 }
-/* line 102, ../compass/parts/project.scss */
+/* line 123, ../compass/parts/project.scss */
 .video_item .vid_thumb img {
   display: block;
 }
-/* line 106, ../compass/parts/project.scss */
+/* line 127, ../compass/parts/project.scss */
 .video_item .vid_thumb .playtag {
   color: #fff;
   position: absolute;
@@ -9677,26 +9692,26 @@ th.hide-for-touch {
 }
 
 /* BOOKING FORM */
-/* line 127, ../compass/parts/project.scss */
+/* line 148, ../compass/parts/project.scss */
 form .multiline {
   height: 18.9rem;
 }
-/* line 131, ../compass/parts/project.scss */
+/* line 152, ../compass/parts/project.scss */
 form small.error {
   display: none;
 }
 
-/* line 137, ../compass/parts/project.scss */
+/* line 158, ../compass/parts/project.scss */
 .error input, .error textarea, .error select {
   margin-bottom: 0px;
 }
 
 /* MISSION STATEMENT */
-/* line 143, ../compass/parts/project.scss */
+/* line 164, ../compass/parts/project.scss */
 .mission_container {
   background-color: #b2a68d;
 }
-/* line 147, ../compass/parts/project.scss */
+/* line 168, ../compass/parts/project.scss */
 .mission_container p {
   color: #fff;
   font-size: 0.9rem;
@@ -9705,48 +9720,48 @@ form small.error {
 }
 
 /* FOOTER GALLERY */
-/* line 158, ../compass/parts/project.scss */
+/* line 179, ../compass/parts/project.scss */
 .footer_gallery_wrapper {
   width: 100%;
   background-color: #eee;
 }
-/* line 163, ../compass/parts/project.scss */
+/* line 184, ../compass/parts/project.scss */
 .footer_gallery_wrapper .footer_gallery_container {
   text-align: center;
 }
 
 /* FOOTER LINKS */
-/* line 173, ../compass/parts/project.scss */
+/* line 194, ../compass/parts/project.scss */
 .asoc_links_container {
   text-align: center;
 }
-/* line 177, ../compass/parts/project.scss */
+/* line 198, ../compass/parts/project.scss */
 .asoc_links_container li {
   display: inline-block;
   list-style: none;
   margin-top: 10px;
 }
-/* line 182, ../compass/parts/project.scss */
+/* line 203, ../compass/parts/project.scss */
 .asoc_links_container li a {
   display: block;
 }
 
-/* line 192, ../compass/parts/project.scss */
+/* line 213, ../compass/parts/project.scss */
 .footer_links_wrapper h4 {
   text-align: center;
 }
 
-/* line 198, ../compass/parts/project.scss */
+/* line 219, ../compass/parts/project.scss */
 .content_table {
   width: 100%;
 }
 
 /* ABOUT */
-/* line 205, ../compass/parts/project.scss */
+/* line 226, ../compass/parts/project.scss */
 .bio_wrapper {
   width: 100%;
 }
-/* line 208, ../compass/parts/project.scss */
+/* line 229, ../compass/parts/project.scss */
 .bio_wrapper .member_pic {
   -webkit-border-radius: 75px;
   -moz-border-radius: 75px;
@@ -9756,5 +9771,139 @@ form small.error {
 }
 
 /**/
+/* CONTENT GALLERYS */
+/* line 242, ../compass/parts/project.scss */
+.content_gallery_wrapper {
+  background-color: #f5f5f5;
+  width: 100%;
+  margin-left: 0.1rem;
+  padding-top: 10px;
+}
+/* line 249, ../compass/parts/project.scss */
+.content_gallery_wrapper .image_caption {
+  color: #80796A;
+  display: inline-block;
+  width: 100%;
+}
+
+/* LOGIN FORM */
+/* line 259, ../compass/parts/project.scss */
+.nav_container .login_form_container {
+  display: none;
+}
+
+/* line 263, ../compass/parts/project.scss */
+.login_form_container {
+  width: 20%;
+  position: absolute;
+  right: 0px;
+  top: 36px;
+  background-color: #333;
+  z-index: 100;
+  padding: 10px;
+}
+/* line 273, ../compass/parts/project.scss */
+.login_form_container fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 278, ../compass/parts/project.scss */
+.login_form_container fieldset label {
+  display: inline-block;
+  color: #fff;
+}
+/* line 285, ../compass/parts/project.scss */
+.login_form_container fieldset #Email label, .login_form_container fieldset #Password label {
+  width: 100%;
+}
+/* line 290, ../compass/parts/project.scss */
+.login_form_container fieldset .middleColumn {
+  clear: both;
+}
+
+/* line 298, ../compass/parts/project.scss */
+#login_modal #form_modal_container {
+  position: relative;
+  padding: 10px;
+}
+/* line 303, ../compass/parts/project.scss */
+#login_modal #form_modal_container fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 308, ../compass/parts/project.scss */
+#login_modal #form_modal_container fieldset label {
+  display: inline-block;
+  color: #333;
+}
+/* line 315, ../compass/parts/project.scss */
+#login_modal #form_modal_container fieldset #Email label, #login_modal #form_modal_container fieldset #Password label {
+  width: 100%;
+}
+/* line 320, ../compass/parts/project.scss */
+#login_modal #form_modal_container fieldset .middleColumn {
+  clear: both;
+}
+
+/* line 328, ../compass/parts/project.scss */
+.social_link {
+  color: #fff !important;
+}
+
+/* OFF CANVAS */
+/* line 336, ../compass/parts/project.scss */
+.right-off-canvas-menu .login_form_container {
+  width: 100%;
+  position: relative;
+  padding: 0px;
+  top: inherit;
+  right: inherit;
+  display: none;
+}
+/* line 347, ../compass/parts/project.scss */
+.right-off-canvas-menu li {
+  border-bottom: 1px #fff solid;
+  list-style: none;
+  text-transform: uppercase;
+}
+/* line 353, ../compass/parts/project.scss */
+.right-off-canvas-menu li:last-child {
+  border-bottom: none;
+}
+
+/* line 361, ../compass/parts/project.scss */
+.right-off-canvas-toggle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: none;
+  z-index: 50;
+  color: #333;
+  text-transform: uppercase;
+}
+
 /* Media queries */
 /* media_queries */
+@media only screen and (max-width: 1130px) {
+  /* line 6, ../compass/parts/mediaqueries.scss */
+  .top-nav {
+    display: none;
+  }
+
+  /* line 12, ../compass/parts/mediaqueries.scss */
+  .right-off-canvas-toggle {
+    display: block;
+  }
+
+  /* line 18, ../compass/parts/mediaqueries.scss */
+  .gallery_wrapper {
+    height: 250px;
+  }
+
+  /* line 24, ../compass/parts/mediaqueries.scss */
+  .logo_container {
+    width: 50%;
+  }
+}

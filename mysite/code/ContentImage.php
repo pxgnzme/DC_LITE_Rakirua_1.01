@@ -12,6 +12,9 @@ class ContentImage extends DataObject {
 
   public function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    $fields->removeFieldFromTab("Root.Main","ContentGallerysID");
+    $fields->removeFieldFromTab("Root.Main","SortOrder");
     
     return $fields;    
   }

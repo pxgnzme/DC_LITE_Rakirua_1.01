@@ -1,8 +1,30 @@
 /* media_queries */
 
-@media only screen and (max-width: 49.375em) {
+@media only screen and (max-width: 1130px) {
 	
 	
-	
+	.top-nav{
+
+		display:none;
+
+	}
+
+	.right-off-canvas-toggle{
+
+		display:block;
+
+	}
+
+	.gallery_wrapper{
+
+		height:250px;
+
+	}
+
+	.logo_container{
+
+		width:50%;
+
+	}
 	
 }

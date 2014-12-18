@@ -31,7 +31,7 @@ class rakHunting extends Page {
       $gridFieldConfig = GridFieldConfig_RecordEditor::create(); 
       $gridfield = new GridField("Huts", "Huts", Hut::get(), $gridFieldConfig);
 
-      $fields->addFieldToTab('Root.Content.Huts', $gridfield);
+      $fields->addFieldToTab('Root.Content.BlockPricing', $gridfield);
       $fields->addFieldToTab('Root.Content.ContentGallerys', $gridfield2);
 
       return $fields;    
@@ -48,7 +48,7 @@ class rakHunting_Controller extends Page_Controller {
 
     $data = $current->ContentGallerys();
 
-    $galleryHTML = "<ul class= 'content_gallery_wrapper small-block-grid-2 medium-block-grid-4'>";
+    $galleryHTML = "<ul class= 'content_gallery_wrapper small-block-grid-2 medium-block-grid-2 large-block-grid-4'>";
 
     foreach ($data as $key => $value) {
 
@@ -58,7 +58,7 @@ class rakHunting_Controller extends Page_Controller {
       
         foreach ($value->ContentImages() as $key2 => $value2) {
 
-          $galleryHTML = $galleryHTML."<li><a href='".$value2->Image()->Filename."'><img src='".$value2->Image()->Filename."' alt='".$value2->Image()->Filename."'/></a></li>";
+          $galleryHTML = $galleryHTML."<li><a href='".$value2->Image()->Filename."'><img src='".$value2->Image()->Filename."' alt='".$value2->Image()->Filename."'/></a><a class = 'image_caption' href='".$value2->Image()->Filename."'>".$value2->Caption."</a></li>";
 
         }
 

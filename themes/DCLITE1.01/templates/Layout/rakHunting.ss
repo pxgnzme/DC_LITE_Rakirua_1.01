@@ -24,20 +24,6 @@
 
 <% end_if %>
 
-<div class= "row">
-
-<% loop $ContentGallerys %>
-    Gallery: $Title<br>
-    Number of Images in this Gallery: $ContentImages.Count<br>
-    <ul>
-        <% loop $ContentImages %>
-            <li>Image caption: $Caption</li>
-        <% end_loop %>
-    </ul>
-<% end_loop %>
-
-</div>
-
 <% if $ShowTitle = "1"%>
 <div class ="row">
 
@@ -63,21 +49,7 @@
 
 <% if $hasFooterGallery = "1"%>
 
-<div class = "footer_gallery_wrapper">
-
-    <div class="row footer_gallery_container collapse">
-
-        <% if $items %>
-            <% loop $items.Limit(6) %>
-            <div class = "medium-2 small-12 columns">
-                $Image.SetWidth(600).CroppedImage(400,400)
-            </div>
-            <% end_loop %>
-        <% end_if %>
-
-    </div>
-
-</div>
+<% include Footer %>
 
 <% end_if %>
 	
