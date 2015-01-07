@@ -26,7 +26,7 @@ class rakHunting extends Page {
       //AgmAgenda
 
       $gridFieldConfig2 = GridFieldConfig_RecordEditor::create(); 
-      $gridfield2 = new GridField("ContentGallerys", "Content Gallerys", $this->ContentGallerys(), $gridFieldConfig2);
+      $gridfield2 = new GridField("ContentGallerys", "Content Gallerys", $this=>ContentGallerys(), $gridFieldConfig2);
 
       $gridFieldConfig = GridFieldConfig_RecordEditor::create(); 
       $gridfield = new GridField("Huts", "Huts", Hut::get(), $gridFieldConfig);
